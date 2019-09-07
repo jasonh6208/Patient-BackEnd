@@ -14,11 +14,13 @@ public class PatientService {
 
 	@Autowired
 	private PatientRepository patientRepository;
-	
+
+	// add patient to database
 	public Patient addPatient(Patient patient) {
 		return patientRepository.save(patient);
 	}
-	
+
+	// get all patient from database
 	public List<Patient> getAllPatients(){
 		return patientRepository.findAll();
 	}

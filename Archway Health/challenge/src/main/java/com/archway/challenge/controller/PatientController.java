@@ -18,13 +18,13 @@ public class PatientController {
 	@Autowired
 	private PatientService patientService;
 
-	// Get all records
+	// Get all patient from database using GET method
 	@GetMapping("/list")
 	public List<Patient> getAllPatients() {
 		return patientService.getAllPatients();
 	}
 
-	// Create a new record
+	// Add patient to database using POST method
 	@PostMapping("/save")
 	public Patient addPatient(@Valid @RequestBody Patient patient) {
 		return patientService.addPatient(patient);
